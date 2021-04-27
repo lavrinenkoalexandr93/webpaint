@@ -1,0 +1,58 @@
+// main: ../stylesheet.less
+
+.nav {
+    display: flex;
+
+   
+    @media @mobile {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 100%;
+        right: 0;
+        z-index: 3;
+
+        padding: 1rem;
+
+        background-color: @black;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+
+        text-align: center;
+
+        &.show {
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+
+    }
+}
+
+.nav__link {
+
+    margin: 0 2rem;
+
+    color: @gray;
+    font-size: .92rem;
+    font-weight: 700;
+    line-height: 2;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: color .2s linear;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        color: @red;
+    }
+
+    @media @mobile {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

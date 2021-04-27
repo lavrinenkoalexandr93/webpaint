@@ -1,0 +1,40 @@
+// main: ../stylesheet.less
+
+.btn {
+    padding: 1.28rem 3.28rem;
+    background-color: @red;
+    color: @white;
+    font-size: 1rem;
+    
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: .5rem;
+
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 10px @red;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &--sm {
+        font-size: .85rem;
+        padding: .85rem 1rem;
+
+        transition: background-color .2s linear;
+
+        &:hover {
+            box-shadow: none;
+            background-color: @gray-dark;
+        }
+
+        @media @mobile-sm {
+            font-size: .6rem;
+            padding: .7rem .8rem;
+        }
+    }
+}
